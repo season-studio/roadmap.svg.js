@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Rollup and Debug",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\.rollup\\rollup.js",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Roadmap test</title>
+<script type="text/javascript" src="../node_modules/regenerator-runtime/runtime.js"></script>
+<script type="text/javascript" src="../.dist/index.js"></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="550" d-width="1789" d-height="821" viewBox="0,0,1789,821" xmlns:roadmap="http://www.w3.org/1999/xlink">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:r="https://season-studio.github.io/" width="1789" height="821" r:tag="template">
+        <style>
+            <![CDATA[
+            * {
+                font-family: "等线 Light";
+            }
+            text {
+                fill: #000;
+            }
+            .time-asix {
+                font-size: 22px;
+                text-anchor: middle;
+                dominant-baseline: middle;
+            }
+
+            /* style of the caption */
+            .caption-text {
+                font-family: "等线";
+                font-size: 30px;
+                dominant-baseline: middle;
+                text-anchor: middle;
+                fill: #fff;
+                color: #fff;
+                padding: 6px;
+                height: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .caption-background {
+                fill: #ef4d06;
+            }
+            [data-project-state="warn"] .caption-background {
+                fill: #600;
+            }
+            .caption-graph {
+                opacity: 0.8
+            }
+
+            /* style of the text of the item */
+            .item-text {
+                font-family: "等线 Light";
+                font-size: 22px;
+                text-anchor: end;
+                fill: #000;
+                stroke: none;
+            }
+            .item-text-up {
+                dominant-baseline: auto;
+            }
+            .item-text-down {
+                dominant-baseline: hanging;
+            }
+            
+            /* style of the track of the item */
+            .item-track {
+                fill: #ccc;
+                stroke: #fff;
+            }
+            [data-item-state="delay"] .item-track {
+                fill: red;
+            }
+            [data-item-state="normal"] .item-track {
+                fill: #23A8F2;
+            }
+            [data-item-state="finish"] .item-track {
+                fill: #0ED068;
+            }
+            ]]>
+        </style>
+        <defs>
+            <pattern id="fillColumn" width="102" height="6" patternUnits="userSpaceOnUse">
+                <path d="M102,0v3" stroke="#000" stroke-width="1" />
+            </pattern>
+            <filter id="itemTextShadow" x="0" y="0" width="100%" height="100%">
+                <feGaussianBlur result="blurOut" in="SourceAlpha" stdDeviation="3" />
+                <feColorMatrix result="matrixOut" in="blurOut" type="matrix" values="0 0 0 0 0 
+                                                                                     0 0 0 0 0 
+                                                                                     0 0 0 0 0 
+                                                                                     0 0 0 1 0" />
+                <feBlend in="SourceGraphic" in2="matrixOut" mode="normal" />
+            </filter>
+            <marker id="arrow" 
+                markerUnits="strokeWidth" 
+                markerWidth="12" 
+                markerHeight="12" 
+                viewBox="0 0 12 12" 
+                refX="12" 
+                refY="6" 
+                orient="auto">
+                <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: #000000;" />
+                <path d="M11 2V10" stroke="#000" fill="none" />
+            </marker>
+        </defs>
+        <g r:tag="backgaround">
+            <rect x="0" y="0" width="1428" height="726" stroke="#666" stroke-width="1" fill="url(#fillColumn)" stroke-dasharray="3" transform="translate(339, 57)" r:time-scale-size="width" r:dync-global="height=layout.globalZoneSize+2" />
+            <rect x="0" y="0" width="1789" height="821" fill="rgba(246,246,246,0.5)" stroke="none" r:dync-global="height=layout.globalZoneSize+82" />
+            <g transform="translate(339, 0)">
+                <text y="36" class="time-asix">
+                    <tspan x="51" r:time="0" r:time-start="2020/12/01" fill="#aaa">Past</tspan>
+                    <tspan x="153" r:time="1" r:time-start="2021/01/01">Jan.</tspan>
+                    <tspan x="255" r:time="2" r:time-start="2021/02/01">Feb.</tspan>
+                    <tspan x="357" r:time="3" r:time-start="2021/03/01">Mar.</tspan>
+                    <tspan x="459" r:time="4" r:time-start="2021/04/01">Apr.</tspan>
+                    <tspan x="561" r:time="5" r:time-start="2021/05/01">May</tspan>
+                    <tspan x="663" r:time="6" r:time-start="2021/06/01">Jun.</tspan>
+                    <tspan x="765" r:time="7" r:time-start="2021/07/01">Jul.</tspan>
+                    <tspan x="867" r:time="8" r:time-start="2021/08/01">Aug.</tspan>
+                    <tspan x="969" r:time="9" r:time-start="2021/09/01">Sep.</tspan>
+                    <tspan x="1071" r:time="10" r:time-start="2021/10/01">Oct.</tspan>
+                    <tspan x="1173" r:time="11" r:time-start="2021/11/01">Nov.</tspan>
+                    <tspan x="1275" r:time="12" r:time-start="2021/12/01">Dec.</tspan>
+                    <tspan x="1379" r:time="13" r:time-start="2022/01/01" r:time-end="2022/02/01" fill="#aaa">Future</tspan>
+                </text>
+            </g>
+        </g>
+        <g r:tag="roadmap-zone" transform="matrix(1,0,0,1,0,58)" r:max-size="741" r:prime-date-map="`${year-1}/12/01`">
+            <g r:tag="project-template" r:grow-direction="horizontal" r:item-margin="0">
+                <g r:tag="project-group" r:dync-project="data-project-state=project.state">
+                    <rect x="17" y="0" width="1749" height="0" stroke="none" fill="rgba(128,128,128,0.1)" r:dync-project="height=layout.projectZoneSize+20;fill=(layout.projectIndex, (layout.projectIndex&1)?'rgba(128,128,128,0.1)':'none')" />
+                    <g r:tag="project-zone" transform="matrix(1,0,0,1,0,10)">
+                        <g r:tag="project-caption">
+                            <rect x="28" y="0" width="71" height="69" stroke="none" class="caption-background caption-graph" />
+                            <rect x="28" y="0" width="294" height="69" stroke="none" class="caption-background caption-graph" />
+                            <image x="33" y="4" width="60" height="60" r:dync="href=project.image;$show=project.image" />
+                            <foreignObject x="100" y="0" width="223" height="69">
+                                <body xmlns="http://www.w3.org/1999/xhtml">
+                                    <div class="caption-text" r:dync=":=project.caption">
+                                            Project Caption
+                                    </div>
+                                </body>
+                            </foreignObject>
+                        </g>
+                        <g r:tag="project-item-zone" transform="translate(339, 0)">
+                            <g r:tag="project-item" r:dync="data-item-state=item.state">
+                                <rect x="0" y="26" width="100" height="17" class="item-track" r:dync="x=layout.itemStart;width=layout.itemSize"></rect>
+                                <line x1="0" y1="34" x2="0" y2="34" stroke="#000" stroke-width="1"stroke-dasharray="5" marker-end="url(#arrow)" r:dync="$show=$.break(Number(item.progress)&&item.state);x1=layout.itemStart;x2=layout.itemStart+layout.itemSize*Number(item.progress)" />
+                                <text x="100" y="22" filter="url(#itemTextShadow)" class="item-text item-text-up" r:dync="x=layout.itemEnd;:=item.text;$show=!(layout.itemLocalIndex & 1)">Item1</text>
+                                <text x="100" y="46" filter="url(#itemTextShadow)" class="item-text item-text-down" r:dync="x=layout.itemEnd;:=item.text;$show=(layout.itemLocalIndex & 1)">Item1</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+</svg>
+<script type="text/javascript">
+var projects = `
+# 检活算法
+    第1轮检测结果初步优化;2020/12/01;2021/04/10;delay;1
+        认证方案探索;2021/04/10;2021/06/01;normal;0.4
+        认证方案调优;2021/06/01;2021/07/30;;
+        认证;2021/08/01;2021/08/30;
+        ;
+        农行特例;2021/04/10;2021/05/09;normal;0.8
+        应用项目支撑;2021/05/09;2021/07/01;;
+    结构光方案或其他应用方案探索;2021/09/01;2021/12/31;;
+
+# 智能客服
+    通用0.9版本上线;2020/12/01;2021/04/15;finish;1
+    应用推广探索;2021/04/15;2021/08/31;;0.11
+    ;
+
+# 数据挖掘
+    技术和竞品调研;2021/04/25;2021/05/31;normal;0.13
+    可行性(人寿)DEMO;2021/06/01;2021/06/31;;
+    初版架构及开发;2021/07/01;2021/08/31;;
+    正式版迭代开发;2021/09/01;2021/12/31;;
+    
+# 5G RCS预研
+    技术调研;2020/12/01;2021/03/30;finish;1
+    待商业模式确定后再看机会跟进;2021/06/01;2021/08/15;;
+
+# OCR相关
+    调优上线;2020/12/01;2021/01/31;finish;1
+        自训练及剪裁调优(挂起);2021/02/01;2021/08/31;delay;0.14
+        ;
+        服务器版封装;2021/03/15;2021/04/15;finish;1
+        面单分类预研;2021/04/15;2021/06/30;normal;0.2
+        ;
+    其他机会探索;2021/09/01;2021/12/01;;
+
+# 语义相关
+    知识库自建设方案预研;2020/12/01;2021/03/10;finish;1
+    待定;2021/06/01;2021/12/01;;
+
+
+`;
+
+    console.log("RoadmapSVG tag =", RoadmapSVG.VERSION, RoadmapSVG.STAMP);
+    
+    const containerElement = document.querySelector("svg");
+    const templateSVG = document.querySelector("svg[r\\:tag='template']");
+    const template = new RoadmapSVG(containerElement, templateSVG);
+    window["$t"] = template;
+    template.showSample();
+
+    function drawProjects() {
+        const list = [];
+        let project = undefined;
+        let items = undefined;
+        projects.replace("\t", "    ").split("\n").forEach(line => {
+            line = line.trimEnd();
+            const indentCount = line.search(/\S/);
+            if (indentCount >= 0) {
+                const pureLine = line.trim();
+                if (pureLine.startsWith("#")) {
+                    project = { caption: pureLine.replace("#", "").trim() };
+                    items = undefined;
+                    list.push(project);
+                } else if (pureLine === ";") {
+                    if (items && items.$parent && items.$parent.$group) {
+                        let newItems = [];
+                        items.$parent.push(newItems);
+                        newItems.$parent = items.$parent;
+                        newItems.$indent = indentCount;
+                        items = newItems;
+                    }
+                } else {
+                    if (items) {
+                        if (items.$indent < indentCount) {
+                            [true, undefined].forEach(g => {
+                                let newItems = [];
+                                newItems.$parent = items;
+                                newItems.$group = g;
+                                items.push(newItems);
+                                items = newItems;
+                                items.$indent = indentCount;
+                            });
+                        } else if (items.$indent > indentCount) {
+                            while (items.$parent && items.$indent > indentCount) {
+                                items = items.$parent;
+                                if (items.$group && items.$parent) {
+                                    items = items.$parent;
+                                }
+                            }
+                            items.$indent = indentCount;
+                        }
+                    } else {
+                        items = (project.items = []);
+                        items.$indent = indentCount;
+                    }
+                    const itemData = pureLine.split(/;|；/).map(v => v.trim());
+                    items.push({ 
+                        text: itemData[0], 
+                        start: itemData[1],
+                        end: itemData[2] || (Date.parse(itemData[1]) + 60000 * 60 * 24),
+                        state: (itemData[3] || undefined), 
+                        progress: (Number(itemData[4]) || 0)
+                    });
+                }
+            }
+        });
+        console.log(list);
+        template.showProjects(list);
+    }
+
+    function testSave() {
+        $t.toImageData().then((v) => {
+            const a = document.createElement("a");
+            a.href = v;
+            a.download = "1.png";
+            a.click();
+        });
+    }
+    
+</script>
+</body>
+</html>
